@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.env*
+!.env.example
+.DS_Store
+*.log
+.qa/
+test-results/
+playwright-report/
+.vercel/
+/Prit_Panchal_AI_Engineer_Resume_Casey_Working.docx
