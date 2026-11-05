@@ -31,9 +31,9 @@ test("SEO metadata and profile content are present in server-rendered HTML", asy
     await expect(page.locator("h1")).toHaveCount(1);
     await expect(page.locator("h1")).toContainText("AI Engineer");
     await expect(
-      page.getByRole("heading", { name: "Selected AI & ML projects." }),
+      page.getByRole("heading", { name: "Selected projects." }),
     ).toBeVisible();
-    await expect(page.locator(".project-card")).toHaveCount(4);
+    await expect(page.locator(".project-card")).toHaveCount(2);
     await expect(page.locator("main section[aria-labelledby]")).toHaveCount(6);
     const schema = JSON.parse(
       (await page.locator("#profile-schema").textContent()) ?? "{}",
@@ -41,7 +41,7 @@ test("SEO metadata and profile content are present in server-rendered HTML", asy
     expect(schema["@type"]).toBe("ProfilePage");
     expect(schema.mainEntity["@type"]).toBe("Person");
     expect(schema.mainEntity.name).toBe("Prit Panchal");
-    expect(schema.mainEntity.jobTitle).toBe("AI Engineer");
+    expect(schema.mainEntity.jobTitle).toBe("Full-Stack AI Engineer | Generative AI");
     expect(schema.mainEntity.worksFor.name).toBe("Navaera Software Services");
     expect(schema.mainEntity.sameAs).toBeUndefined();
     const url = getSiteUrl();
