@@ -5,7 +5,7 @@ export const profile = {
   phone: "+91 9313975183",
   location: "Vadodara, India",
   website: "https://pprit.me",
-  resume: "/Prit_Panchal_Resume.docx",
+  resume: "/Prit_Panchal_Resume.pdf",
   summary:
     "AI Engineer with one year of hands-on experience building LLM-powered applications for banking clients. Developing CASEY, a multi-tenant, multi-agent AI assistant, and designed an AML/FINTRAC STR narration pipeline that reduced narration time from hours to about five minutes.",
 };
