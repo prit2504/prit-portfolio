@@ -89,35 +89,6 @@ function SectionTitle({
 }
 
 function ProjectVisual({ project }: { project: Project }) {
-  if (project.icon === "agents")
-    return (
-      <div className="project-visual agent-visual" aria-hidden="true">
-        <div className="visual-label">
-          <span className="status-dot" /> casey.workflow
-        </div>
-        <div className="agent-graph">
-          <div className="graph-node task-node">
-            <TerminalIcon size={16} /> task
-          </div>
-          <div className="graph-stem" />
-          <div className="graph-node orchestrator">
-            <Network size={17} /> orchestrator
-          </div>
-          <div className="graph-branches" />
-          <div className="graph-children">
-            <span>
-              <Code2 size={16} /> tools
-            </span>
-            <span>
-              <Layers3 size={16} /> sandbox
-            </span>
-          </div>
-        </div>
-        <span className="visual-footnote">
-          isolated execution · coordinated agents
-        </span>
-      </div>
-    );
   if (project.icon === "pixel")
     return (
       <div className="project-visual agent-visual" aria-hidden="true">
@@ -141,7 +112,6 @@ function ProjectVisual({ project }: { project: Project }) {
         <span className="visual-footnote">private files · local processing</span>
       </div>
     );
-  if (project.icon === "rag")
     return (
       <div className="project-visual rag-visual" aria-hidden="true">
         <div className="visual-label">retrieval.pipeline</div>
@@ -163,24 +133,6 @@ function ProjectVisual({ project }: { project: Project }) {
           </div>
         </div>
         <span className="visual-footnote">ingest → retrieve → reason</span>
-      </div>
-    );
-  if (project.icon === "ocr")
-    return (
-      <div className="project-visual ocr-visual" aria-hidden="true">
-        <div className="visual-label">vision.recognize()</div>
-        <div className="ocr-scene">
-          <span className="scan-corner corner-tl" />
-          <span className="scan-corner corner-tr" />
-          <span className="scan-corner corner-bl" />
-          <span className="scan-corner corner-br" />
-          <strong>HELLO WORLD</strong>
-          <div className="scan-line" />
-        </div>
-        <span className="visual-footnote">
-          <span className="green text-terminal-green">output:</span> &quot;HELLO
-          WORLD&quot; <span className="muted text-muted">// illustration</span>
-        </span>
       </div>
     );
   return (
