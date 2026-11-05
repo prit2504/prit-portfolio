@@ -471,7 +471,7 @@ export default function Portfolio() {
             </p>
           </div>
           <a className="sidebar-resume" href={profile.resume} download>
-            <ArrowDownToLine size={15} /> Download resume <span>.docx</span>
+            <ArrowDownToLine size={15} /> Download resume <span>.pdf</span>
           </a>
           <div className="theme-row">
             <span>COLOR THEME</span>
