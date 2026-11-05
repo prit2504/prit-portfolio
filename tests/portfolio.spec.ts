@@ -49,7 +49,7 @@ test("resume content renders without runtime errors or horizontal overflow", asy
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
   await expect(page).toHaveTitle(
-    "Prit Panchal | AI Engineer · Generative AI & Python",
+    "Prit Panchal | Full-Stack AI Engineer · Generative AI & Agents",
   );
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Panchal",
@@ -79,25 +79,23 @@ test("project filters and project dialogs work with keyboard dismissal", async (
 }) => {
   await page.goto("/");
   const filters = page.getByRole("group", { name: "Filter projects" });
-  await filters.getByRole("button", { name: "ML", exact: true }).click();
-  await expect(page.locator(".project-card")).toHaveCount(2);
+  await filters.getByRole("button", { name: "Platforms", exact: true }).click();
+  await expect(page.locator(".project-card")).toHaveCount(1);
   const projectButton = page.getByRole("button", {
-    name: "View Reading the real world project details",
+    name: "View PixelDrift project details",
   });
   await projectButton.click();
   await expect(
-    page.getByRole("dialog", { name: "Reading the real world" }),
+    page.getByRole("dialog", { name: "PixelDrift" }),
   ).toBeVisible();
-  await expect(
-    page.getByRole("heading", { name: "Architecture", exact: true }),
-  ).toBeVisible();
+  await expect(page.getByRole("link", { name: "Visit live project" })).toHaveAttribute("href", "https://pixeldrift.online");
   await page.keyboard.press("Escape");
   await expect(page.locator(".project-dialog")).not.toBeVisible();
   await expect(projectButton).toBeFocused();
   await filters.getByRole("button", { name: "RAG", exact: true }).click();
   await expect(page.locator(".project-card")).toHaveCount(1);
   await filters.getByRole("button", { name: /All projects/ }).click();
-  await expect(page.locator(".project-card")).toHaveCount(4);
+  await expect(page.locator(".project-card")).toHaveCount(2);
 });
 
 test("terminal supports commands, autocomplete, history, themes, and navigation", async ({
@@ -113,7 +111,7 @@ test("terminal supports commands, autocomplete, history, themes, and navigation"
   await input.press("Tab");
   await expect(input).toHaveValue("whoami");
   await input.press("Enter");
-  await expect(terminal).toContainText("Prit Panchal — AI Engineer");
+  await expect(terminal).toContainText("Prit Panchal — Full-Stack AI Engineer");
   await input.fill("not-a-command");
   await input.press("Enter");
   await expect(terminal).toContainText("Command not found: not-a-command");
@@ -177,7 +175,7 @@ test("explorer navigation follows the selected section", async ({ page }) => {
   await expect(page).toHaveURL(/#skills$/);
   await expect(page.locator(".editor-tab")).toContainText("stack.json");
   await expect(
-    page.getByRole("heading", { name: "Technical skills & AI stack." }),
+    page.getByRole("heading", { name: "Technical skills." }),
   ).toBeVisible();
   if (test.info().project.name === "mobile")
     await expect(
