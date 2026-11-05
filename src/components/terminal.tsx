@@ -101,9 +101,9 @@ export default function Terminal({
     else if (command === "resume") {
       const link = document.createElement("a");
       link.href = profile.resume;
-      link.download = "Prit_Panchal_Resume.docx";
+      link.download = "Prit_Panchal_Resume.pdf";
       link.click();
-      output = "Downloading Prit_Panchal_Resume.docx…";
+      output = "Downloading Prit_Panchal_Resume.pdf…";
     } else if (command.startsWith("theme ")) {
       const theme = command.slice(6);
       if (theme === "amber" || theme === "green") {
