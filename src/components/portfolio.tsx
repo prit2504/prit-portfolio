@@ -118,6 +118,29 @@ function ProjectVisual({ project }: { project: Project }) {
         </span>
       </div>
     );
+  if (project.icon === "pixel")
+    return (
+      <div className="project-visual agent-visual" aria-hidden="true">
+        <div className="visual-label">
+          <span className="status-dot" /> pixeldrift.tools
+        </div>
+        <div className="agent-graph">
+          <div className="graph-node task-node">
+            <FileText size={16} /> PDF tools
+          </div>
+          <div className="graph-stem" />
+          <div className="graph-node orchestrator">
+            <Layers3 size={17} /> browser processing
+          </div>
+          <div className="graph-branches" />
+          <div className="graph-children">
+            <span><Folder size={16} /> images</span>
+            <span><FileText size={16} /> documents</span>
+          </div>
+        </div>
+        <span className="visual-footnote">private files · local processing</span>
+      </div>
+    );
   if (project.icon === "rag")
     return (
       <div className="project-visual rag-visual" aria-hidden="true">
