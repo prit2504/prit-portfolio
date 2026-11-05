@@ -1,6 +1,6 @@
 # Prit Panchal — Terminal Portfolio
 
-A complete Linux-terminal-inspired portfolio built with Next.js App Router, React, TypeScript, Tailwind CSS v4, and Lucide icons. Content is based on the supplied resume.
+A complete Linux-terminal-inspired portfolio built with Next.js App Router, React, TypeScript, Tailwind CSS v4, and Lucide icons. Content is based on the November 2026 resume.
 
 ## Run locally
 
@@ -27,7 +27,7 @@ The site can run on any host that supports Next.js. No API keys or database are 
 
 ## On-page SEO
 
-The page includes a focused title and description, author metadata, a single visible H1 with name and role, descriptive section headings, semantic sections, Open Graph and Twitter metadata, and server-rendered ProfilePage/Person JSON-LD based on the resume. All four projects and the experience content are present in the initial HTML, including when JavaScript is disabled.
+The page includes a focused title and description, author metadata, a single visible H1 with name and role, descriptive section headings, semantic sections, Open Graph and Twitter metadata, and server-rendered ProfilePage/Person JSON-LD based on the resume. Both featured personal projects and the experience content are present in the initial HTML, including when JavaScript is disabled.
 
 The `/social-image` route generates a 1200 × 630 PNG matching the terminal theme. `/robots.txt` permits crawling. `/sitemap.xml` lists the homepage once; section fragments are not separate pages.
 
@@ -69,7 +69,7 @@ Use `npm run format` to format source files and `npm run format:check` to check 
 - Filterable projects with keyboard-accessible detail dialogs and architecture diagrams
 - Interactive portfolio terminal with command history and tab completion
 - Amber and phosphor-green themes, saved locally
-- Downloadable original DOCX resume, email links, click-to-call, and clipboard copy
+- Downloadable latest PDF resume, email links, click-to-call, and clipboard copy
 - Metadata, Open Graph tags, custom favicon, reduced-motion support, and a skip link
 
 ## Terminal
@@ -97,8 +97,8 @@ Use ↑/↓ for history, Tab to complete a unique command, Ctrl+L to clear outpu
 - `src/components/terminal.tsx`: terminal commands and behavior
 - `src/app/globals.css`: Tailwind imports, `@theme` tokens, shared components, and terminal artwork
 - `src/app/layout.tsx`: page metadata
-- `public/Prit_Panchal_Resume.docx`: downloadable resume
+- `public/Prit_Panchal_Resume.pdf`: downloadable resume
 
 Google Fonts are loaded with `display=swap`; system monospace and sans-serif fallbacks work if fonts are unavailable. The application itself requires no third-party service.
 
-The resume's GitHub and LinkedIn fields are placeholders, so the site does not include fabricated profile URLs or project repository links. Add verified URLs when available. AML pipeline results retain their original internal-testing qualification. Project visuals are schematic illustrations, not live model outputs.
+The resume does not provide GitHub or LinkedIn profile URLs, so the site does not invent them. PixelDrift links to its live website; no repository URL is fabricated for the RAG chatbot. AML narration performance retains its internal-testing qualification. Project visuals are schematic illustrations, not live model outputs.
