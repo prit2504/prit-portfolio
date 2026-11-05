@@ -65,7 +65,7 @@ export function GET() {
           marginTop: 18,
         }}
       >
-        {">"} AI Engineer
+        {">"} Full-Stack AI Engineer
       </div>
       <div
         style={{
@@ -75,7 +75,7 @@ export function GET() {
           marginTop: 23,
         }}
       >
-        Generative AI · Multi-agent systems · RAG · Python
+        Generative AI · Multi-agent systems · RAG · NL2SQL
       </div>
       <div
         style={{
@@ -90,7 +90,7 @@ export function GET() {
       >
         <span>Vadodara, India</span>
         <span style={{ marginLeft: "auto", color: "#a4bc8a" }}>
-          Building intelligent, working systems.
+          Building AI systems for real-world workflows.
         </span>
       </div>
     </div>,
