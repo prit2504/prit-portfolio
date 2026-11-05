@@ -146,13 +146,15 @@ test("resume downloads and contact destinations are valid", async ({
       .getByRole("button", { name: "Open navigation", exact: true })
       .click();
   const downloadPromise = page.waitForEvent("download");
-  await page.getByRole("link", { name: "Download resume .docx" }).click();
+  await page.getByRole("link", { name: "Download resume .pdf" }).click();
   const download = await downloadPromise;
-  expect(download.suggestedFilename()).toBe("Prit_Panchal_Resume.docx");
+  expect(download.suggestedFilename()).toBe("Prit_Panchal_Resume.pdf");
   expect(await download.failure()).toBeNull();
-  const response = await page.request.get("/Prit_Panchal_Resume.docx");
+  const response = await page.request.get("/Prit_Panchal_Resume.pdf");
   expect(response.status()).toBe(200);
-  expect((await response.body()).length).toBeGreaterThan(30_000);
+  expect(response.headers()["content-type"]).toContain("application/pdf");
+  expect((await response.body()).subarray(0, 5).toString()).toBe("%PDF-");
+  expect((await response.body()).length).toBeGreaterThan(4_000);
   await expect(page.locator(".contact-email")).toHaveAttribute(
     "href",
     "mailto:pprit2504@gmail.com",
