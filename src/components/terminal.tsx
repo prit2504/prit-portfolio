@@ -84,7 +84,7 @@ export default function Terminal({
       output =
         "EXPLORE\n  whoami       A quick introduction\n  about        Read my story\n  projects     Explore selected work\n  experience   Follow my engineering journey\n  skills       View my technical stack\n  education    Academic background\n  contact      Get in touch\n  resume       Download my resume\n\nSHELL\n  ls / pwd     Explore this workspace\n  cd <section> Jump to a section\n  theme green  Switch to phosphor green\n  theme amber  Switch to warm amber\n  date         Current time in India\n  clear / exit Clear or close the terminal\n\nUse ↑ ↓ for history and Tab to autocomplete.";
     else if (command === "whoami")
-      output = `${profile.name} — ${profile.role}\n${profile.location}\n\nI build LLM-powered automation and Python backend systems.\nCurrently: Emerging System Engineer at Navaera Software Services.`;
+      output = `${profile.name} — ${profile.role}\n${profile.location}\n\nI build multi-agent banking assistants, RAG and NL2SQL systems, and Python backends.\nCurrently: Emerging System Engineer (AI Engineer) at Navaera Software Services.`;
     else if (command === "ls" || command === "ls -la")
       output =
         "overview.sh  about.md  projects/  experience.log  stack.json  contact.sh\n\nTry: cd projects";
