@@ -135,19 +135,6 @@ function ProjectVisual({ project }: { project: Project }) {
         <span className="visual-footnote">ingest → retrieve → reason</span>
       </div>
     );
-  return (
-    <div className="project-visual prediction-visual" aria-hidden="true">
-      <div className="visual-label">model.predict(features)</div>
-      <div className="chart-bars">
-        {[25, 39, 32, 54, 48, 66, 57, 82, 76, 95, 86, 110].map((height, i) => (
-          <span key={i} style={{ height }} />
-        ))}
-      </div>
-      <span className="visual-footnote">
-        features → random forest → estimate
-      </span>
-    </div>
-  );
 }
 
 function ProjectDialog({
