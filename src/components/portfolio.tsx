@@ -52,7 +52,7 @@ const sectionIcons = [
   FileJson,
   Mail,
 ];
-const filters = ["All projects", "Agents", "RAG", "ML"] as const;
+const filters = ["All projects", "Platforms", "RAG"] as const;
 const ascii = [
   "██████╗ ██████╗ ",
   "██╔══██╗██╔══██╗",
@@ -89,36 +89,29 @@ function SectionTitle({
 }
 
 function ProjectVisual({ project }: { project: Project }) {
-  if (project.icon === "agents")
+  if (project.icon === "pixel")
     return (
       <div className="project-visual agent-visual" aria-hidden="true">
         <div className="visual-label">
-          <span className="status-dot" /> casey.workflow
+          <span className="status-dot" /> pixeldrift.tools
         </div>
         <div className="agent-graph">
           <div className="graph-node task-node">
-            <TerminalIcon size={16} /> task
+            <FileText size={16} /> PDF tools
           </div>
           <div className="graph-stem" />
           <div className="graph-node orchestrator">
-            <Network size={17} /> orchestrator
+            <Layers3 size={17} /> browser processing
           </div>
           <div className="graph-branches" />
           <div className="graph-children">
-            <span>
-              <Code2 size={16} /> tools
-            </span>
-            <span>
-              <Layers3 size={16} /> sandbox
-            </span>
+            <span><Folder size={16} /> images</span>
+            <span><FileText size={16} /> documents</span>
           </div>
         </div>
-        <span className="visual-footnote">
-          isolated execution · coordinated agents
-        </span>
+        <span className="visual-footnote">private files · local processing</span>
       </div>
     );
-  if (project.icon === "rag")
     return (
       <div className="project-visual rag-visual" aria-hidden="true">
         <div className="visual-label">retrieval.pipeline</div>
@@ -140,24 +133,6 @@ function ProjectVisual({ project }: { project: Project }) {
           </div>
         </div>
         <span className="visual-footnote">ingest → retrieve → reason</span>
-      </div>
-    );
-  if (project.icon === "ocr")
-    return (
-      <div className="project-visual ocr-visual" aria-hidden="true">
-        <div className="visual-label">vision.recognize()</div>
-        <div className="ocr-scene">
-          <span className="scan-corner corner-tl" />
-          <span className="scan-corner corner-tr" />
-          <span className="scan-corner corner-bl" />
-          <span className="scan-corner corner-br" />
-          <strong>HELLO WORLD</strong>
-          <div className="scan-line" />
-        </div>
-        <span className="visual-footnote">
-          <span className="green text-terminal-green">output:</span> &quot;HELLO
-          WORLD&quot; <span className="muted text-muted">// illustration</span>
-        </span>
       </div>
     );
   return (
@@ -429,7 +404,7 @@ export default function Portfolio() {
           <div className="sidebar-label">CURRENTLY</div>
           <div className="current-role">
             <span className="status-dot" />
-            <span>AI Engineer</span>
+            <span>Full-Stack AI Engineer</span>
           </div>
           <p>@ Navaera Software Services</p>
           <span className="sidebar-location">
@@ -448,7 +423,7 @@ export default function Portfolio() {
             </p>
           </div>
           <a className="sidebar-resume" href={profile.resume} download>
-            <ArrowDownToLine size={15} /> Download resume <span>.docx</span>
+            <ArrowDownToLine size={15} /> Download resume <span>.pdf</span>
           </a>
           <div className="theme-row">
             <span>COLOR THEME</span>
@@ -521,13 +496,13 @@ export default function Portfolio() {
                       <span className="accent text-accent" aria-hidden="true">
                         ❯
                       </span>{" "}
-                      AI Engineer <span className="role-slash">/</span>{" "}
-                      <span className="muted text-muted">Builder</span>
+                      Full-Stack AI Engineer <span className="role-slash">/</span>{" "}
+                      <span className="muted text-muted">Generative AI</span>
                     </span>
                   </h1>
                   <p className="hero-description">
-                    Building LLM-powered automation,
-                    <br className="desktop-break" /> RAG pipelines, and Python
+                    Building multi-agent AI assistants, RAG systems,
+                    <br className="desktop-break" /> and reliable Python backends for banking
                     backends.
                   </p>
                   <p className="hero-specialties">
@@ -587,13 +562,13 @@ export default function Portfolio() {
                         </strong>
                         <span className="info-divider">──────────────────</span>
                         <p>
-                          <span>Role</span> AI Engineer
+                          <span>Role</span> Full-Stack AI Engineer
                         </p>
                         <p>
-                          <span>Focus</span> Generative AI
+                          <span>Focus</span> Agents & RAG
                         </p>
                         <p>
-                          <span>Lang</span> Python
+                          <span>Lang</span> Python / TypeScript
                         </p>
                         <p>
                           <span>Shell</span> Curiosity
@@ -679,8 +654,8 @@ export default function Portfolio() {
                     <span className="bright text-foreground">
                       “what if” to a working system.
                     </span>{" "}
-                    I build LLM-powered automation and Python backends, with a
-                    focus on making the pieces work together.
+                    I work across agentic workflows, retrieval-augmented generation, natural-language-to-SQL, and full-stack applications with a
+                    focus on building reliable, useful systems.
                   </p>
                   <p>
                     At Navaera Software Services, I work on compliance-focused
@@ -690,10 +665,8 @@ export default function Portfolio() {
                     work with.
                   </p>
                   <p>
-                    Outside that work, I&apos;m building{" "}
-                    <span className="accent text-accent">Casey</span>, a
-                    multi-agent task automation system with coordinated tools
-                    and sandbox execution.
+                    Outside that work, I build independent products, including{" "}
+                    <span className="accent text-accent">Casey</span>, a browser-based PDF and image tools platform, and explore document intelligence with RAG.
                   </p>
                   <div className="about-principle">
                     <Code2 size={19} />
@@ -753,8 +726,8 @@ export default function Portfolio() {
               <SectionTitle
                 number="02"
                 command="ls -la projects/"
-                title="Selected AI & ML projects"
-                description="From coordinated agents to grounded answers. Things I've built."
+                title="Selected projects"
+                description="Products and engineering projects, from browser-based tools to grounded document intelligence."
               />
               <div className="project-toolbar mb-[23px] flex items-center justify-between gap-3">
                 <div
@@ -836,8 +809,8 @@ export default function Portfolio() {
               <SectionTitle
                 number="03"
                 command="git log --oneline"
-                title="AI engineering experience"
-                description="Learning by building, growing through real-world problems."
+                title="Professional experience"
+                description="Building production-oriented AI systems for banking and compliance workflows."
               />
               <div className="timeline relative ml-[5px]">
                 {experience.map((job, index) => (
@@ -902,8 +875,8 @@ export default function Portfolio() {
               <SectionTitle
                 number="04"
                 command="cat stack.json"
-                title="Technical skills & AI stack"
-                description="The technologies I use to turn ideas into systems."
+                title="Technical skills"
+                description="Languages, agent frameworks, LLM infrastructure, backend, frontend, and observability."
               />
               <div className="skills-grid grid grid-cols-1 gap-5 min-[481px]:grid-cols-2 max-[760px]:gap-[15px]">
                 {skillGroups.map((group, index) => {

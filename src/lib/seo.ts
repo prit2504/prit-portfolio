@@ -30,12 +30,12 @@ export function getSiteUrl(
 }
 
 export const seo = {
-  title: "Prit Panchal | AI Engineer · Generative AI & Python",
+  title: "Prit Panchal | Full-Stack AI Engineer · Generative AI & Agents",
   description:
-    "Prit Panchal is an AI Engineer in Vadodara, India, building multi-agent automation, RAG pipelines, and Python backends with LangGraph and FastAPI.",
+    "Prit Panchal is a Full-Stack AI Engineer in Vadodara, India, building multi-agent banking assistants, RAG and NL2SQL systems, and AML/FINTRAC automation with Python, LangGraph, FastAPI, and vLLM.",
   imagePath: "/social-image",
   imageAlt:
-    "Prit Panchal — AI Engineer. Generative AI, multi-agent systems, RAG, and Python backend engineering. Vadodara, India.",
+    "Prit Panchal — Full-Stack AI Engineer. Generative AI, multi-agent systems, RAG, NL2SQL, and Python backend engineering. Vadodara, India.",
 };
 
 export function createMetadata(url = getSiteUrl()): Metadata {
@@ -103,7 +103,7 @@ export function createProfileSchema(url = getSiteUrl()) {
       name: profile.name,
       jobTitle: profile.role,
       description:
-        "AI Engineer building LLM-powered automation and Python backend systems, including multi-agent workflows and retrieval-augmented generation.",
+        "Full-Stack AI Engineer building LLM-powered banking applications, multi-agent workflows, retrieval-augmented generation, NL2SQL, and compliance automation.",
       email: profile.email,
       address: {
         "@type": "PostalAddress",
