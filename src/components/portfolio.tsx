@@ -52,7 +52,7 @@ const sectionIcons = [
   FileJson,
   Mail,
 ];
-const filters = ["All projects", "Agents", "RAG", "ML"] as const;
+const filters = ["All projects", "Platforms", "RAG"] as const;
 const ascii = [
   "██████╗ ██████╗ ",
   "██╔══██╗██╔══██╗",
@@ -429,7 +429,7 @@ export default function Portfolio() {
           <div className="sidebar-label">CURRENTLY</div>
           <div className="current-role">
             <span className="status-dot" />
-            <span>AI Engineer</span>
+            <span>Full-Stack AI Engineer</span>
           </div>
           <p>@ Navaera Software Services</p>
           <span className="sidebar-location">
@@ -521,13 +521,13 @@ export default function Portfolio() {
                       <span className="accent text-accent" aria-hidden="true">
                         ❯
                       </span>{" "}
-                      AI Engineer <span className="role-slash">/</span>{" "}
-                      <span className="muted text-muted">Builder</span>
+                      Full-Stack AI Engineer <span className="role-slash">/</span>{" "}
+                      <span className="muted text-muted">Generative AI</span>
                     </span>
                   </h1>
                   <p className="hero-description">
-                    Building LLM-powered automation,
-                    <br className="desktop-break" /> RAG pipelines, and Python
+                    Building multi-agent AI assistants, RAG systems,
+                    <br className="desktop-break" /> and reliable Python backends for banking
                     backends.
                   </p>
                   <p className="hero-specialties">
@@ -587,13 +587,13 @@ export default function Portfolio() {
                         </strong>
                         <span className="info-divider">──────────────────</span>
                         <p>
-                          <span>Role</span> AI Engineer
+                          <span>Role</span> Full-Stack AI Engineer
                         </p>
                         <p>
-                          <span>Focus</span> Generative AI
+                          <span>Focus</span> Agents & RAG
                         </p>
                         <p>
-                          <span>Lang</span> Python
+                          <span>Lang</span> Python / TypeScript
                         </p>
                         <p>
                           <span>Shell</span> Curiosity
@@ -679,8 +679,8 @@ export default function Portfolio() {
                     <span className="bright text-foreground">
                       “what if” to a working system.
                     </span>{" "}
-                    I build LLM-powered automation and Python backends, with a
-                    focus on making the pieces work together.
+                    I work across agentic workflows, retrieval-augmented generation, natural-language-to-SQL, and full-stack applications with a
+                    focus on building reliable, useful systems.
                   </p>
                   <p>
                     At Navaera Software Services, I work on compliance-focused
@@ -690,10 +690,8 @@ export default function Portfolio() {
                     work with.
                   </p>
                   <p>
-                    Outside that work, I&apos;m building{" "}
-                    <span className="accent text-accent">Casey</span>, a
-                    multi-agent task automation system with coordinated tools
-                    and sandbox execution.
+                    Outside that work, I build independent products, including{" "}
+                    <span className="accent text-accent">Casey</span>, a browser-based PDF and image tools platform, and explore document intelligence with RAG.
                   </p>
                   <div className="about-principle">
                     <Code2 size={19} />
@@ -753,8 +751,8 @@ export default function Portfolio() {
               <SectionTitle
                 number="02"
                 command="ls -la projects/"
-                title="Selected AI & ML projects"
-                description="From coordinated agents to grounded answers. Things I've built."
+                title="Selected projects"
+                description="Products and engineering projects, from browser-based tools to grounded document intelligence."
               />
               <div className="project-toolbar mb-[23px] flex items-center justify-between gap-3">
                 <div
@@ -836,8 +834,8 @@ export default function Portfolio() {
               <SectionTitle
                 number="03"
                 command="git log --oneline"
-                title="AI engineering experience"
-                description="Learning by building, growing through real-world problems."
+                title="Professional experience"
+                description="Building production-oriented AI systems for banking and compliance workflows."
               />
               <div className="timeline relative ml-[5px]">
                 {experience.map((job, index) => (
@@ -902,8 +900,8 @@ export default function Portfolio() {
               <SectionTitle
                 number="04"
                 command="cat stack.json"
-                title="Technical skills & AI stack"
-                description="The technologies I use to turn ideas into systems."
+                title="Technical skills"
+                description="Languages, agent frameworks, LLM infrastructure, backend, frontend, and observability."
               />
               <div className="skills-grid grid grid-cols-1 gap-5 min-[481px]:grid-cols-2 max-[760px]:gap-[15px]">
                 {skillGroups.map((group, index) => {
