@@ -89,7 +89,7 @@ function SectionTitle({
 }
 
 function ProjectVisual({ project }: { project: Project }) {
-  if (project.icon === "pixel")
+  if (project.icon === "pixel") {
     return (
       <div className="project-visual agent-visual" aria-hidden="true">
         <div className="visual-label">
@@ -112,29 +112,31 @@ function ProjectVisual({ project }: { project: Project }) {
         <span className="visual-footnote">private files · local processing</span>
       </div>
     );
-    return (
-      <div className="project-visual rag-visual" aria-hidden="true">
-        <div className="visual-label">retrieval.pipeline</div>
-        <div className="rag-diagram">
-          <div className="document-stack">
-            <FileText size={33} />
-          </div>
-          <span className="flow-line" />
-          <div className="vector-grid">
-            {Array.from({ length: 25 }, (_, i) => (
-              <i key={i} style={{ opacity: 0.2 + ((i * 7) % 9) / 10 }} />
-            ))}
-          </div>
-          <span className="flow-line" />
-          <div className="answer-bubble">
-            <Sparkles size={19} />
-            <i />
-            <i />
-          </div>
+  }
+
+  return (
+    <div className="project-visual rag-visual" aria-hidden="true">
+      <div className="visual-label">retrieval.pipeline</div>
+      <div className="rag-diagram">
+        <div className="document-stack">
+          <FileText size={33} />
         </div>
-        <span className="visual-footnote">ingest → retrieve → reason</span>
+        <span className="flow-line" />
+        <div className="vector-grid">
+          {Array.from({ length: 25 }, (_, i) => (
+            <i key={i} style={{ opacity: 0.2 + ((i * 7) % 9) / 10 }} />
+          ))}
+        </div>
+        <span className="flow-line" />
+        <div className="answer-bubble">
+          <Sparkles size={19} />
+          <i />
+          <i />
+        </div>
       </div>
-    );
+      <span className="visual-footnote">ingest → retrieve → reason</span>
+    </div>
+  );
 }
 
 function ProjectDialog({
