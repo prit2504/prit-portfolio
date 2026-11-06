@@ -20,7 +20,7 @@ import {
   Folder,
   GitBranch,
   GraduationCap,
-  Layers3,
+  Layers,
   Mail,
   MapPin,
   Menu,
@@ -101,7 +101,7 @@ function ProjectVisual({ project }: { project: Project }) {
           </div>
           <div className="graph-stem" />
           <div className="graph-node orchestrator">
-            <Layers3 size={17} /> browser processing
+            <Layers size={17} /> browser processing
           </div>
           <div className="graph-branches" />
           <div className="graph-children">
@@ -869,7 +869,7 @@ export default function Portfolio() {
               />
               <div className="skills-grid grid grid-cols-1 gap-5 min-[481px]:grid-cols-2 max-[760px]:gap-[15px]">
                 {skillGroups.map((group, index) => {
-                  const Icon = [Braces, Sparkles, Cpu, Layers3][index];
+                  const Icon = [Braces, Sparkles, Cpu, Layers, GitBranch, Network][index];
                   return (
                     <article className="skill-card" key={group.title}>
                       <div className="skill-card-heading flex items-center justify-between text-accent">
